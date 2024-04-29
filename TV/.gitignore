@@ -1,0 +1,20 @@
+# Unity generated files
+Library/
+Temp/
+obj/
+Build/
+BuildReport/
+
+# Auto-generated Visual Studio files
+*.csproj
+*.sln
+*.suo
+*.user
+*.unityproj
+*.pidb
+
+# Unity3D generated meta files
+*.pidb.meta
+*.pdb.meta
+
+.vs/
