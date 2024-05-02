@@ -63,12 +63,12 @@ public class VideoManager : MonoBehaviour
         LoadVideo(videos[index]);
     }
 
-/*    public void PlayPause()
-    {
-        if (videoPlayer.isPlaying)
-            videoPlayer.Pause();
-        else
-            videoPlayer.Play();
-    }*/
+    /*    public void PlayPause()
+        {
+            if (videoPlayer.isPlaying)
+                videoPlayer.Pause();
+            else
+                videoPlayer.Play();
+        }*/
 
 }

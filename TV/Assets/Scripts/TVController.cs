@@ -11,6 +11,7 @@ public class TVController : MonoBehaviour
     public Slider videoSlider;
 
    [SerializeField] private bool isPlaying = false;
+    public Sprite[] playPauseSprite;
 
     private void Start()
     {
@@ -37,7 +38,6 @@ public class TVController : MonoBehaviour
             playPauseButton.image.sprite = playPauseSprite[1];
         }
     }
-    public Sprite[] playPauseSprite;
     public void Back()
     {
         galleryMenu.SetActive(true);
