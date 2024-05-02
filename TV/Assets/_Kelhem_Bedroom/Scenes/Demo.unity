@@ -2370,7 +2370,7 @@ MonoBehaviour:
   videos:
   - {fileID: 32900000, guid: e6994bd8abffd394c8bf813c4d285efa, type: 3}
   - {fileID: 32900000, guid: 1b9fa2d7fb0095e4fa6840ea87811675, type: 3}
-  - {fileID: 32900000, guid: 0f463d43a64278c4f9ebb65a29c7ba76, type: 3}
+  - {fileID: 32900000, guid: 090330c5291779a49ace1039dbda9322, type: 3}
   progressSlider: {fileID: 2068000685}
   videoPlayer: {fileID: 2117374844}
   vCam: {fileID: 940680464}
@@ -4752,7 +4752,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 493d7fd95358f034e8111e2f35a24fae, type: 3}
+  m_Texture: {fileID: 2800000, guid: 069d6a63b460f3d46adfa0029d31ea3a, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
