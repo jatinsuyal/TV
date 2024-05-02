@@ -10,12 +10,12 @@ public class TVController : MonoBehaviour
     public Button backButton;
     public Slider videoSlider;
 
-    private bool isPlaying = false;
+   [SerializeField] private bool isPlaying = false;
 
     private void Start()
     {
-        galleryMenu.SetActive(false);
-        videoPlayer.gameObject.SetActive(false);
+        playPauseButton.onClick.AddListener(PlayPause);
+        backButton.onClick.AddListener(Back);
     }
 
     public void TurnOnTV()
@@ -25,33 +25,31 @@ public class TVController : MonoBehaviour
 
     public void PlayPause()
     {
+        isPlaying = !isPlaying;
         if (isPlaying)
         {
-            videoPlayer.Pause();
-            isPlaying = false;
-            playPauseButton.GetComponentInChildren<Text>().text = "Play";
+            videoPlayer.Play();
+            playPauseButton.image.sprite = playPauseSprite[0];
         }
         else
         {
-            videoPlayer.Play();
-            isPlaying = true;
-            playPauseButton.GetComponentInChildren<Text>().text = "Pause";
+            videoPlayer.Pause();
+            playPauseButton.image.sprite = playPauseSprite[1];
         }
     }
-
+    public Sprite[] playPauseSprite;
     public void Back()
     {
         galleryMenu.SetActive(true);
         videoPlayer.gameObject.SetActive(false);
     }
 
-    public void SelectVideo(string videoName)
+    public void SelectVideo()
     {
+        galleryMenu.SetActive(false);
         videoPlayer.gameObject.SetActive(true);
-        videoPlayer.clip = Resources.Load<VideoClip>("Videos/" + videoName);
         videoPlayer.Play();
         isPlaying = true;
-        playPauseButton.GetComponentInChildren<Text>().text = "Pause";
     }
 
     public void Seek(float value)
@@ -59,4 +57,9 @@ public class TVController : MonoBehaviour
         videoPlayer.time = value * videoPlayer.clip.length;
     }
 
+    public void IncreaseSpeed(float speed)
+    {
+       // videoPlayer.playbackSpeed += speedIncrement;
+        videoPlayer.playbackSpeed = speed;
+    }
 }

@@ -18,3 +18,10 @@ BuildReport/
 *.pdb.meta
 
 .vs/
+
+# Unity3D generated meta files
+*.meta
+
+
+# Ignore .mat files
+*.mat
