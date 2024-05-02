@@ -21,7 +21,3 @@ BuildReport/
 
 # Unity3D generated meta files
 *.meta
-
-
-# Ignore .mat files
-*.mat
